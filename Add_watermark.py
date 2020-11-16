@@ -2,7 +2,7 @@ from PIL import Image
 import glob
 import os
 
-if not os.path.exists('./Image'):
+if not os.path.exists('./Image/'):
     os.mkdir('./Image/')
 img_path = './Image/*'
 img_list = glob.glob(img_path) #获取图片路径
