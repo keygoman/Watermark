@@ -16,7 +16,7 @@ if not os.path.exists('./Output/'):
     os.mkdir('./Output')
 
 if (img_list and watermark_list):
-    watermark = Image.open(watermark_list[0]) #提取水印
+    watermark = Image.open(watermark_list[0]).convert("RGBA") #提取水印并转换成RGBA格式
     i = 1
     for path in img_list:
         img = Image.open(path)
